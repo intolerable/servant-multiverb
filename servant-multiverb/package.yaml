@@ -1,0 +1,45 @@
+name:                servant-multiverb
+version:             0.1.0.0
+github:              "intolerable/servant-multiverb/servant-multiverb"
+license:             BSD3
+author:              "Fraser Murray"
+maintainer:          "fraser.m.murray@gmail.com"
+copyright:           "2020 Fraser Murray"
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/servant-multiverb#readme>
+
+default-extensions:
+  - DataKinds
+  - DerivingStrategies
+  - DerivingVia
+  - KindSignatures
+  - PolyKinds
+  - TypeFamilies
+  - TypeOperators
+
+ghc-options: -Wall
+
+dependencies:
+  - base >= 4.7 && < 5
+  - servant
+  - http-types
+
+library:
+  source-dirs: src
+
+tests:
+  servant-multiverb-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    default-extensions:
+      - TypeApplications
+      - OverloadedStrings
+    dependencies:
+      - servant-multiverb
+      - hspec
+      - servant

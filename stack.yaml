@@ -1,0 +1,5 @@
+resolver: nightly-2019-07-25
+
+packages:
+  - servant-multiverb
+  - servant-server-multiverb

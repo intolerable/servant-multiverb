@@ -1,0 +1,66 @@
+name:                servant-server-multiverb
+version:             0.1.0.0
+github:              "intolerable/servant-multiverb/servant-server-multiverb"
+license:             BSD3
+author:              "Fraser Murray"
+maintainer:          "fraser.m.murray@gmail.com"
+copyright:           "2020 Fraser Murray"
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/servant-multiverb#readme>
+
+default-extensions:
+  - AllowAmbiguousTypes
+  - DataKinds
+  - DeriveAnyClass
+  - DeriveGeneric
+  - DerivingVia
+  - DerivingStrategies
+  - FlexibleInstances
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - MultiParamTypeClasses
+  - OverloadedStrings
+  - PolyKinds
+  - QuasiQuotes
+  - RankNTypes
+  - RecordWildCards
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TemplateHaskell
+  - TypeApplications
+  - TypeFamilies
+  - TypeOperators
+  - UndecidableInstances
+
+ghc-options: -Wall
+
+dependencies:
+  - base >= 4.7 && < 5
+  - servant-multiverb
+  - bytestring
+  - http-types
+  - servant
+  - servant-server
+  - wai
+
+library:
+  source-dirs: src
+
+tests:
+  servant-server-multiverb-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    default-extensions:
+      - DataKinds
+      - TypeApplications
+      - OverloadedStrings
+    dependencies:
+      - servant-server-multiverb
+      - hspec
+      - hspec-wai
+      - servant

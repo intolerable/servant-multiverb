@@ -1,0 +1,69 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 4bc94407a1673a7737ba97448a8f9c328214560524f5e3dc0fce8d23ab5bff67
+
+name:           servant-server-multiverb
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/servant-multiverb#readme>
+homepage:       https://github.com/intolerable/servant-multiverb#readme
+bug-reports:    https://github.com/intolerable/servant-multiverb/issues
+author:         Fraser Murray
+maintainer:     fraser.m.murray@gmail.com
+copyright:      2020 Fraser Murray
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/intolerable/servant-multiverb
+  subdir: servant-server-multiverb
+
+library
+  exposed-modules:
+      Servant.Server.Multiverbs
+  other-modules:
+      Paths_servant_server_multiverb
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes DataKinds DeriveAnyClass DeriveGeneric DerivingVia DerivingStrategies FlexibleInstances GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses OverloadedStrings PolyKinds QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators UndecidableInstances
+  ghc-options: -Wall
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , http-types
+    , servant
+    , servant-multiverb
+    , servant-server
+    , wai
+  default-language: Haskell2010
+
+test-suite servant-server-multiverb-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Servant.Server.MultiverbsSpec
+      Paths_servant_server_multiverb
+  hs-source-dirs:
+      test
+  default-extensions: AllowAmbiguousTypes DataKinds DeriveAnyClass DeriveGeneric DerivingVia DerivingStrategies FlexibleInstances GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses OverloadedStrings PolyKinds QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators UndecidableInstances DataKinds TypeApplications OverloadedStrings
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , hspec
+    , hspec-wai
+    , http-types
+    , servant
+    , servant-multiverb
+    , servant-server
+    , servant-server-multiverb
+    , wai
+  default-language: Haskell2010
