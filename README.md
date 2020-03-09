@@ -4,7 +4,7 @@ The existing Servant `Verb` combinator has no way to dynamically choose a HTTP r
 
 The response code is determined by different arms of nested `Either`s, as follows:
 
-```
+```haskell
 type ExampleAPI =
   Verbs 'GET '[JSON] (Result 503 String <|> Result 200 Int)
 
