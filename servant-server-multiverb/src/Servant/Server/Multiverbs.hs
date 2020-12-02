@@ -64,7 +64,7 @@ instance {-# OVERLAPPABLE #-} (VerbsHandler alt, AllCTRender1 ctypes (HandlerTyp
         let finalAction =
               action
                 `addMethodCheck` methodCheck method req
-                `addAcceptCheck` acceptCheck (Proxy @ctypes) acceptHeader
+                `addAcceptCheck` acceptCheck (Proxy @ctypes) (AcceptHeader acceptHeader)
         runAction finalAction env req resp $ \res -> do
           case handleAcceptH1 (Proxy @ctypes) (AcceptHeader acceptHeader) res of
             Nothing -> FailFatal err406

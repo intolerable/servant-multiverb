@@ -4,12 +4,11 @@ import Test.Hspec
 import Test.Hspec.Wai
 
 import Servant.API.Multiverbs
-import Servant.Server.Multiverbs
+import Servant.Server.Multiverbs ()
 import Servant
 
 main :: IO ()
 main = hspec spec
-
 
 spec :: Spec
 spec = with (pure exampleApp) $ do
@@ -20,7 +19,7 @@ spec = with (pure exampleApp) $ do
 
   describe "when the param is \"string\"" $ do
     it "should receive a \"hi!\" body with a 503 status code" $ do
-      post "/string" "" `shouldRespondWith` "\"hi!\"" { matchStatus = 503 }
+      post "/string" "" `shouldRespondWith` "\"hi!\"" { matchStatus = 503, matchHeaders = ["My-Header" <:> "My-Header value"] }
 
   describe "when the param is anything else" $ do
     it "should receive a 5 body with a 500 status code" $ do

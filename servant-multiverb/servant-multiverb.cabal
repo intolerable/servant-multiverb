@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5ff07a727a2d6aa9e621fa28487ab3056ce7e57ec56123c41a35137384f1be8f
+-- hash: 9c17b3e350ead6d46df98a24b8095acb44980eeb201f2815e79c560a98ec6b53
 
 name:           servant-multiverb
 version:        0.1.0.0
@@ -38,7 +38,7 @@ library
   build-depends:
       base >=4.7 && <5
     , http-types
-    , servant
+    , servant >=0.18
   default-language: Haskell2010
 
 test-suite servant-multiverb-test

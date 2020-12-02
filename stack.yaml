@@ -1,4 +1,7 @@
-resolver: nightly-2019-07-25
+resolver: nightly-2020-11-23
+
+# extra-deps:
+#   - servant-0.16
 
 packages:
   - servant-multiverb

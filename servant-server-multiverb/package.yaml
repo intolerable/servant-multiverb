@@ -43,8 +43,8 @@ dependencies:
   - servant-multiverb
   - bytestring
   - http-types
-  - servant
-  - servant-server
+  - servant >= 0.18
+  - servant-server >= 0.18
   - wai
 
 library:
