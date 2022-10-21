@@ -19,6 +19,7 @@ default-extensions:
   - DeriveGeneric
   - DerivingVia
   - DerivingStrategies
+  - FlexibleContexts
   - FlexibleInstances
   - GeneralizedNewtypeDeriving
   - LambdaCase
@@ -59,6 +60,8 @@ tests:
       - DataKinds
       - TypeApplications
       - OverloadedStrings
+    build-tools:
+      - hspec-discover
     dependencies:
       - servant-server-multiverb
       - hspec

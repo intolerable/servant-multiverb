@@ -39,6 +39,8 @@ tests:
     default-extensions:
       - TypeApplications
       - OverloadedStrings
+    build-tools:
+      - hspec-discover
     dependencies:
       - servant-multiverb
       - hspec

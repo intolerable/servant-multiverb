@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.7.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: bbaf6baafd87c50aea64f807120e35ba19809219f81b42c63d55924906c78f44
+-- hash: 6194f7ab26649adcda4525c97b74acd776e5a820e983a8a71cd346c07af620af
 
 name:           servant-server-multiverb
 version:        0.1.0.0
@@ -33,7 +33,30 @@ library
       Paths_servant_server_multiverb
   hs-source-dirs:
       src
-  default-extensions: AllowAmbiguousTypes DataKinds DeriveAnyClass DeriveGeneric DerivingVia DerivingStrategies FlexibleInstances GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses OverloadedStrings PolyKinds QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators UndecidableInstances
+  default-extensions:
+      AllowAmbiguousTypes
+      DataKinds
+      DeriveAnyClass
+      DeriveGeneric
+      DerivingVia
+      DerivingStrategies
+      FlexibleContexts
+      FlexibleInstances
+      GeneralizedNewtypeDeriving
+      LambdaCase
+      MultiParamTypeClasses
+      OverloadedStrings
+      PolyKinds
+      QuasiQuotes
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TemplateHaskell
+      TypeApplications
+      TypeFamilies
+      TypeOperators
+      UndecidableInstances
   ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
@@ -53,8 +76,36 @@ test-suite servant-server-multiverb-test
       Paths_servant_server_multiverb
   hs-source-dirs:
       test
-  default-extensions: AllowAmbiguousTypes DataKinds DeriveAnyClass DeriveGeneric DerivingVia DerivingStrategies FlexibleInstances GeneralizedNewtypeDeriving LambdaCase MultiParamTypeClasses OverloadedStrings PolyKinds QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TemplateHaskell TypeApplications TypeFamilies TypeOperators UndecidableInstances DataKinds TypeApplications OverloadedStrings
+  default-extensions:
+      AllowAmbiguousTypes
+      DataKinds
+      DeriveAnyClass
+      DeriveGeneric
+      DerivingVia
+      DerivingStrategies
+      FlexibleContexts
+      FlexibleInstances
+      GeneralizedNewtypeDeriving
+      LambdaCase
+      MultiParamTypeClasses
+      OverloadedStrings
+      PolyKinds
+      QuasiQuotes
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TemplateHaskell
+      TypeApplications
+      TypeFamilies
+      TypeOperators
+      UndecidableInstances
+      DataKinds
+      TypeApplications
+      OverloadedStrings
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-tool-depends:
+      hspec-discover:hspec-discover
   build-depends:
       base >=4.7 && <5
     , bytestring

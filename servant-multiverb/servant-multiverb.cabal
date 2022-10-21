@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.7.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9c17b3e350ead6d46df98a24b8095acb44980eeb201f2815e79c560a98ec6b53
+-- hash: aa351f5f161a06bb10c96e2006398a9b719712f1baa4c9b975119fb86477bddd
 
 name:           servant-multiverb
 version:        0.1.0.0
@@ -33,7 +33,14 @@ library
       Paths_servant_multiverb
   hs-source-dirs:
       src
-  default-extensions: DataKinds DerivingStrategies DerivingVia KindSignatures PolyKinds TypeFamilies TypeOperators
+  default-extensions:
+      DataKinds
+      DerivingStrategies
+      DerivingVia
+      KindSignatures
+      PolyKinds
+      TypeFamilies
+      TypeOperators
   ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
@@ -49,8 +56,19 @@ test-suite servant-multiverb-test
       Paths_servant_multiverb
   hs-source-dirs:
       test
-  default-extensions: DataKinds DerivingStrategies DerivingVia KindSignatures PolyKinds TypeFamilies TypeOperators TypeApplications OverloadedStrings
+  default-extensions:
+      DataKinds
+      DerivingStrategies
+      DerivingVia
+      KindSignatures
+      PolyKinds
+      TypeFamilies
+      TypeOperators
+      TypeApplications
+      OverloadedStrings
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-tool-depends:
+      hspec-discover:hspec-discover
   build-depends:
       base >=4.7 && <5
     , hspec
