@@ -1,3 +1,10 @@
 with-compiler: ghc-9.2.4
 
 packages: servant-multiverb, servant-server-multiverb
+
+tests: True
+test-options:
+  "--color"
+  "--diff"
+  "--format=specdoc"
+test-show-details: streaming
